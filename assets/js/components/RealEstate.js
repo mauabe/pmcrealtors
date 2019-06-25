@@ -12,24 +12,17 @@ class App extends Component {
 			name: 'Joe'
 		};
 	}
-	clickedBtn = () => {};
-	async test() {}
+
 	render() {
 		return (
 			<div className="home">
 				<Header />
 				<img src="/img/logo.png" />
 				<h1>PMC Realtors</h1>
-					<section >
+					<section id="content-a   ">
 						<Filter />
 						<Listings />
-						<ul>
-							<li>
-								<a href="https://www.pmcrealtors.com" target="new">
-									pmcrealtors.com
-								</a>
-							</li>
-						</ul>
+							<a href="https://www.pmcrealtors.com" target="new">pmcrealtors.com</a>
 					</section>
 			</div>
 		);

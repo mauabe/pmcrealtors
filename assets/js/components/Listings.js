@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class Listings extends Component {
 	constructor() {
 		super();
