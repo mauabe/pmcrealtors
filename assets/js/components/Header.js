@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import logo from '../../img/logo.png';
 
 class Header extends Component {
 	constructor() {
@@ -11,7 +12,10 @@ class Header extends Component {
   render() {
 		return (
 			<header>
-        <div className="logo"> Logo</div>
+        <div className="logo">
+					<img src="img/logo.png" width="70" height="70" alt="logo"/>
+				</div>
+				<div className="pmc-realtors">PMC Realtors</div>
         <nav>
           <a href="/">Create Ads</a>
           <a href="/">PMC Realtors Team</a>

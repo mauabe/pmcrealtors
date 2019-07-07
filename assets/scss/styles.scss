@@ -5,40 +5,73 @@
 @import "listings";
 
 body {
-  line-height: 1;
-  background: white;
+  box-sizing: border-box;
+  // line-height: 1;
+  // background: white;
+  color: white;
+  font-family: "Roboto", san-serif;
 }
-  
-header{
-  background: darkpurple;
-  color:white;
-  overflow: auto;
-  padding: 40px 20px;
 
-  .logo{
-    float: right;
+
+header{
+  height: 140px;
+  vertical-align: top;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7fb5cd+6,c5f7de+100 */
+  background: rgb(127,181,205); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(127,181,205,1) 6%, rgba(197,247,222,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(127,181,205,1) 6%,rgba(197,247,222,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(127,181,205,1) 6%,rgba(197,247,222,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // display: inline-block;
+  
+  .logo {
+    float: left;
+    // margin-top: 11px;
+    margin-left: 60px;
+    margin-right: 20px;
+    padding-top: 25px;
+    
+    img{
+      height: 90px;
+      width: 90px;
+    }
   }
+  .pmc-realtors{
+    font-family: 'Fredericka the Great', cursive;;
+    font-size: 60px;
+    color: $green;
+    margin-left: 150px;
+    margin-right: 20px;
+    padding-top: 40px;
+    max-width: 500px;
+  }
+
   nav{
     float: right;
-
+    margin-right: 40px;
+    // vertical-align: text-top;
+    // margin-top: 1px;
+        
     a{
-      color: white;
+      font-family: 'Rye', cursive;
+      color: black;
       text-decoration: none;
-      padding:  7px 20px;
-      text-transform: capitalize;
-      font-weight: 300;
-      font-size: 0.7rem;
-
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 1rem;
+      
       &:hover{
-        color: #FF718E;
+        color: $verydarkgrey;
       }
       &.register-btn{
-        background: pink;
-        text-align: center;
-        padding: 7px 25px;
+        background: $pink2;
+        padding: 8px 25px;
         text-align: center;
         color: white;
         border-radius: 5px;
+        margin: 0px 25px;
+        &:hover{
+          background: $pink;
+        }
       }
     }
   }

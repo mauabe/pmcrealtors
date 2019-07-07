@@ -17,13 +17,11 @@ class App extends Component {
 		return (
 			<div className="home">
 				<Header />
-				<img src="/img/logo.png" />
-				<h1>PMC Realtors</h1>
-				<section id="content-a   ">
-					<Filter />
-					<Listings />
+					<section id="content-a   ">
+						<Filter />
+						<Listings />
 						<a href="https://www.pmcrealtors.com" target="new">pmcrealtors.com</a>
-				</section>
+					</section>
 			</div>
 		);
 	}
