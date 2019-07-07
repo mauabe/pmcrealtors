@@ -16,9 +16,9 @@ class Listings extends Component {
 						<input type="text" name="search" />
 					</section>
 					<section className="sort-by-area">
-						<div> 390 results found</div>
+						<div className="results"> 390 results found</div>
 						<div className="sort-options">
-							<select className="sortby" name="sortby">
+							<select className="sort-by" name="sort-by">
 								<option value="price-asc">Highest Price</option>
 								<option value="price-dsc">Lowest Price</option>
 							</select>
@@ -28,32 +28,38 @@ class Listings extends Component {
 							</div>
 						</div>
 					</section>
-
 					<section className="listing-results">
-						<div className="listings">
+						{/* <div className="col-md-3"> */}
+							<div className="listings">
+						{/* </div> */}
 							<div className="listing-img">
-								<span className="address">Address</span>
+								<span className="address">1222 Ironwood Ave</span><br/>
 								<div className="details">
-									<div className="user-img"></div>
-									<div className="user-details">
-										<span className="user-name">Ricarda Steen</span>
-										<span className="post-date">05/05/2019</span>
+									<div className="coll-md-3">
+										<div className="user-img"></div>
 									</div>
-									<div className="listing-details">
-										<div className="square-footage" aria-hidden="true">
-											<i className="far fa-square" aria-hidden="true"></i>
-											<span>1000 ft&up2;</span>
+									<div className="col-md-9">
+										<div className="user-details">
+											<span className="user-name">Ricarda Steen</span>
+											<span className="post-date">05/05/2019</span>
 										</div>
-										<div className="bedrooms">
-											<i className="fa fa-bed" aria-hidden="true"></i>
-											<span className="bedrooms">3 bedrooms</span>
+										<div className="listing-details">
+											<div className="square-footage" aria-hidden="false">
+												<span>1000 ft&up2; </span>
+												<i className="far fa-square" aria-hidden="false"></i>
+											</div>
+											<div className="bedrooms">
+												<i className="fa fa-bed" aria-hidden="true"></i>
+												<span className="bedrooms">3 bedrooms</span>
+											</div>
+											<div className="view-btn">View Listing</div>
 										</div>
 									</div>
 								</div>
-								<div className="bottom-info">
-									<span>$250/night</span>
-									<span><i className="far fa-map-marker" aria-hidden="true"></i></span>
-								</div>
+							</div>
+							<div className="bottom-info">
+								<span className="rate">$250/night</span> <br />
+								<span className="location"><i className="far fa-map-marker"></i>Pine Mountain Club, CA</span>
 							</div>
 						</div>
 					</section>

@@ -64,7 +64,7 @@ module.exports = env => {
 			minimizer: [
 				new UglifyJsPlugin({
 					uglifyOptions: {
-						compress,
+						compress: false,
 						mangle: false,
 						output: {
 							beautify: env.NODE_ENV !== 'production' ? true : false

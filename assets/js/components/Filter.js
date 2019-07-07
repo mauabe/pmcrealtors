@@ -26,37 +26,42 @@ class Filter extends Component {
 						<option>2 baths</option>
 					</select>
 					<div name="price" className="filter price">
-						<span className="price">Price</span>
+						<span className="price">Price</span><br />
 						<input type="text" name="min-price" className="min-price"/>
 						<input type="text" name="max-price" className="max-price"/>
 					</div>
 					<div name="floor-space" className="filter floorspace">
-						<span className="floor-space">Floor Space</span>
+						<span className="floor-space">Floor Space</span><br/>
 						<input type="text" name="min-floor-space" className="min-floor-space"/>
 						<input type="text" name="max-floor-space" className="max-floor-space"/>
 					</div>
 
 					<div className="filter extras">
-						<span>Facilities</span>
+						<span className="facilities">Facilities</span> <br />
+
 						<label htmlFor="extras" >
-							<span>Elevator</span>
+							<span>Elevator
 							<input name="extras" value="elevators" type="checkbox" />
-						</label> 
+							</span>
+						</label> <br />
 
 						<label htmlFor="extras" >
-							<span>Storage</span>
+							<span>Storage
 							<input name="extras" value="storage" type="checkbox" />
-						</label> 
+							</span>
+						</label> <br />
 
 						<label htmlFor="extras">
-							<span>Swimming Pool</span>
+							<span>Swimming Pool
 							<input name="extras" value="swiming-pool" type="checkbox" />
-						</label> 
+							</span>
+						</label> <br />
 
 						<label htmlFor="extras">
-							<span>Gym</span>
+							<span>Gym
 							<input name="extras" value="gym" type="checkbox" />
-						</label> 
+							</span>
+						</label> <br />
 					</div>
 				</div>
 			</section>

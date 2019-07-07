@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,500,700);
 * {
   box-sizing: border-box; }
 
@@ -49,14 +50,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.logo img {
+  padding: .5rem, 2rem, .5rem, 2rem; }
+
 #content-area {
   overflow: auto;
   width: 100%;
-  background: black;
+  background: #dadde2;
   min-height: 100vh; }
 
 #filter {
-  background: #FAF7F5;
+  box-sizing: border-box;
+  background: #dae2ef;
   width: 30%;
   max-width: 300px;
   display: block;
@@ -65,6 +70,8 @@ table {
     padding: 20px;
     max-width: 300px; }
   #filter h4 {
+    font-size: 1.2rem !important;
+    color: #1B1B1B;
     margin-bottom: 25px;
     font-weight: 700px;
     font-size: .9rem;
@@ -79,10 +86,21 @@ table {
     margin-bottom: 25px;
     width: 100%; }
   #filter .filter .title {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     display: block;
     margin-bottom: 1rem;
-    color: #ADABAA; }
+    color: #4b4b4b;
+    border-bottom: 1px solid #828d9d; }
+  #filter .filter .price, #filter .filter .floor-space {
+    color: #1B1B1B;
+    padding-bottom: .4rem; }
+  #filter .filter .facilities {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #828d9d;
+    padding-bottom: 5px;
+    margin-top: 1rem;
+    margin-bottom: .8rem; }
   #filter .filter input[type="text"] {
     border-radius: 3px;
     width: 45%;
@@ -90,11 +108,17 @@ table {
     padding: 0.4rem;
     display: inline-block;
     margin-right: 2.5%;
-    margin-bottom: 1rem; }
-  #filter .filter.extras label {
-    display: block; }
-    #filter .filter.extras label input[type="checkbox"] {
-      float: right; }
+    margin-bottom: .8rem;
+    margin-top: .5rem;
+    color: #4b4b4b; }
+  #filter .filter.extras {
+    color: #4b4b4b; }
+    #filter .filter.extras span {
+      color: #4b4b4b;
+      display: block; }
+      #filter .filter.extras span input[type="checkbox"] {
+        float: right;
+        margin-right: 20px; }
 
 #listings {
   width: 70%;
@@ -107,32 +131,37 @@ table {
     background: transparent;
     padding: 15px;
     border: none;
-    border-bottom: 2px solid #D1CBCD;
+    border-bottom: 1px solid #828d9d;
     margin-bottom: 20px;
-    color: #D1CBCD; }
+    font-size: 2rem;
+    font-weight: 100;
+    color: #dadde2; }
   #listings .sort-by-area {
     margin-bottom: 20px; }
     #listings .sort-by-area .results {
-      color: #D1CBCD;
+      color: #828d9d;
       font-size: 0.8rem;
       display: inline-block; }
-  #listings .sort-option {
-    float: right; }
-    #listings .sort-option select {
-      font-size: 0.9rem;
-      font-weight: 300;
-      border: 1px solid #D1CBCD;
-      background: transparent;
-      padding: 20px;
-      display: inline-block;
-      margin-right: 15px;
-      vertical-align: top; }
-    #listings .sort-option .view {
-      display: inline-block; }
-      #listings .sort-option .view .fa {
-        font-size: 1.5rem; }
+    #listings .sort-by-area .sort-options {
+      float: right; }
+      #listings .sort-by-area .sort-options select {
+        font-size: 0.9rem;
+        font-weight: 300;
+        border: 1px solid #dadde2;
+        background: transparent;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top; }
+      #listings .sort-by-area .sort-options .sort-by {
+        padding: 20px; }
+      #listings .sort-by-area .sort-options .view {
+        display: inline-block; }
+        #listings .sort-by-area .sort-options .view .fas {
+          font-size: 1.5rem; }
   #listings .listing-results {
-    margin-bottom: 80px; }
+    margin-bottom: 80px;
+    color: transparent !important; }
     #listings .listing-results .listings {
       background: #FEFEFF;
       width: 33%;
@@ -140,92 +169,191 @@ table {
       -webkit-box-shadow: 10px 6px 34px -16px rgba(0, 0, 0, 0.7);
       -moz-box-shadow: 10px 6px 34px -16px rgba(0, 0, 0, 0.7);
       box-shadow: 10px 6px 34px -16px rgba(0, 0, 0, 0.7); }
-    #listings .listing-results .listing-img {
-      color: white;
-      padding: 15px;
-      position: realative;
-      background: url(http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg) no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      min-height: 200px;
-      -webkit-border-top-left-radius: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px; }
-      #listings .listing-results .listing-img .details {
-        padding: 20px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c2ce0+0,b44af7+91 */
-        background: rgba(92, 44, 224, 0.8);
-        /* Old browsers */
-        background: -moz-linear-gradient(-45deg, rgba(92, 44, 224, 0.8) 0%, rgba(180, 74, 247, 0.8) 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(92, 44, 224, 0.8) 0%, rgba(180, 74, 247, 0.8) 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(92, 44, 224, 0.8) 0%, rgba(180, 74, 247, 0.8) 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      #listings .listing-results .listings .listing-img {
+        color: white;
+        padding: 15px;
+        position: relative;
+        background: url("http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 200px;
         -webkit-border-top-left-radius: 5px;
         -webkit-border-top-right-radius: 5px;
         -moz-border-radius-topleft: 5px;
         -moz-border-radius-topright: 5px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px; }
-      #listings .listing-results .listing-img .user-img {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: 2px, solid white;
-        background: url(http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg) no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover; }
-      #listings .listing-results .listing-img .user-details {
-        vertical-align: top;
-        display: inline-block;
-        width: 70%; }
-      #listings .listing-results .listing-img .user-name {
-        font-size: 0.9rem;
-        font-weight: 300;
-        display: block;
-        color: white; }
-      #listings .listing-results .listing-img .post-date {
-        display: block;
-        color: rgba(255, 255, 255, 0.7); }
+        #listings .listing-results .listings .listing-img:hover .details {
+          opacity: 1; }
+        #listings .listing-results .listings .listing-img:hover .address {
+          opacity: 0; }
+        #listings .listing-results .listings .listing-img .address {
+          position: absolute;
+          bottom: 20px;
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+        #listings .listing-results .listings .listing-img .details {
+          transition: all 0.4s ease-in-out;
+          opacity: 0;
+          padding: 30px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          -webkit-border-top-left-radius: 5px;
+          -webkit-border-top-right-radius: 5px;
+          -moz-border-radius-topleft: 5px;
+          -moz-border-radius-topright: 5px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c2ce0+0,b44af7+91 */
+          background: rgba(78, 2, 229, 0.8);
+          /* Old browsers */
+          background: -moz-linear-gradient(-45deg, rgba(78, 2, 229, 0.8) 0%, rgba(157, 28, 237, 0.8) 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(-45deg, rgba(78, 2, 229, 0.8) 0%, rgba(157, 28, 237, 0.8) 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(135deg, rgba(78, 2, 229, 0.8) 0%, rgba(157, 28, 237, 0.8) 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+          #listings .listing-results .listings .listing-img .details .col-md-3 {
+            width: 25%;
+            display: inline-bock;
+            vertical-align: top;
+            margin-left: 10px;
+            padding: 0  15px; }
+            #listings .listing-results .listings .listing-img .details .col-md-3 .user-img {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              border: 2px solid white;
+              background: url("http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg") no-repeat center center;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover; }
+          #listings .listing-results .listings .listing-img .details .col-md-9 {
+            width: 75%;
+            display: inline-bock; }
+            #listings .listing-results .listings .listing-img .details .col-md-9 .user-details {
+              vertical-align: top;
+              display: inline-block; }
+              #listings .listing-results .listings .listing-img .details .col-md-9 .user-details .user-name {
+                font-weight: 300;
+                font-size: 0.9rem;
+                display: block;
+                color: white;
+                margin-top: 3px;
+                margin-bottom: 5px;
+                margin-left: 50px; }
+              #listings .listing-results .listings .listing-img .details .col-md-9 .user-details .post-date {
+                font-size: 0.9rem;
+                display: block;
+                color: rgba(255, 255, 255, 0.7);
+                margin-left: 50px; }
+            #listings .listing-results .listings .listing-img .details .col-md-9 .listing-details {
+              margin-top: 20px;
+              margin-bottom: 20px;
+              margin-left: 50px; }
+              #listings .listing-results .listings .listing-img .details .col-md-9 .listing-details .fas {
+                display: inline-block;
+                font-size: 20px;
+                margin-right: 15px; }
+              #listings .listing-results .listings .listing-img .details .col-md-9 .listing-details span {
+                font-weight: 300;
+                font-size: .8rem;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: 3px; }
+              #listings .listing-results .listings .listing-img .details .col-md-9 .listing-details .square-footage {
+                margin-bottom: 15px; }
+              #listings .listing-results .listings .listing-img .details .col-md-9 .listing-details .bedrooms .fas {
+                display: inline-block; }
+          #listings .listing-results .listings .listing-img .details .view-btn {
+            position: absolute;
+            bottom: 20px;
+            background: #1B1B1B;
+            padding: 7px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            text-align: center;
+            min-width: 120px;
+            margin-left: 90px;
+            transition: background 0.3s ease-in-out; }
+            #listings .listing-results .listings .listing-img .details .view-btn:hover {
+              background: #c2425c;
+              cursor: pointer; }
+        #listings .listing-results .listings .listing-img .bottom-info {
+          padding: 50px;
+          position: absolute;
+          bottom: 20px; }
+          #listings .listing-results .listings .listing-img .bottom-info .rate {
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+            color: #828d9d; }
+          #listings .listing-results .listings .listing-img .bottom-info .location {
+            font-size: 1.2rem;
+            display: block;
+            color: #dadde2; }
+  #listings .pagination {
+    display: inline-block; }
+    #listings .pagination .pagination-nums li {
+      color: #828d9d; }
 
 body {
-  line-height: 1;
-  background: white; }
+  box-sizing: border-box;
+  color: white;
+  font-family: "Roboto", san-serif; }
 
 header {
-  background: darkpurple;
-  color: white;
-  overflow: auto;
-  padding: 40px 20px; }
+  height: 140px;
+  vertical-align: top;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7fb5cd+6,c5f7de+100 */
+  background: #7fb5cd;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #7fb5cd 6%, #c5f7de 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   header .logo {
-    float: right; }
+    float: left;
+    margin-left: 60px;
+    margin-right: 20px;
+    padding-top: 25px; }
+    header .logo img {
+      height: 90px;
+      width: 90px; }
+  header .pmc-realtors {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 60px;
+    color: #0a3804;
+    margin-left: 150px;
+    margin-right: 20px;
+    padding-top: 40px;
+    max-width: 500px; }
   header nav {
-    float: right; }
+    float: right;
+    margin-right: 40px; }
     header nav a {
-      color: white;
+      font-family: 'Rye', cursive;
+      color: black;
       text-decoration: none;
-      padding: 7px 20px;
-      text-transform: capitalize;
-      font-weight: 300;
-      font-size: 0.7rem; }
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 1rem; }
       header nav a:hover {
-        color: #FF718E; }
+        color: #4b4b4b; }
       header nav a.register-btn {
-        background: pink;
-        text-align: center;
-        padding: 7px 25px;
+        background: #bb2946;
+        padding: 8px 25px;
         text-align: center;
         color: white;
-        border-radius: 5px; }
+        border-radius: 5px;
+        margin: 0px 25px; }
+        header nav a.register-btn:hover {
+          background: #c2425c; }
 

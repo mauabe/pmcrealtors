@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,700');
+
+.logo img{
+  padding: .5rem, 2rem, .5rem, 2rem;
+}
+
 #content-area{
   overflow: auto;
   width: 100%;
-  background: black;
+  background: $lightgrey;
   min-height: 100vh;
 }
 
 
 #filter {
-  background: $grey;
+  box-sizing: border-box;
+  background: $lightgrey2;
   width: 30%;
   max-width: 300px;
   display: block;
@@ -18,6 +25,8 @@
     max-width: 300px;
   }
   h4{
+    font-size: 1.2rem !important;
+    color: $almostblack;
     margin-bottom: 25px;
     font-weight: 700px;
     font-size: .9rem;
@@ -35,11 +44,26 @@
   }
   .filter{
     .title{
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       display: block;
       margin-bottom: 1rem;
-      color: $darkgrey;
+      color: $verydarkgrey;
+      border-bottom: 1px solid $darkgrey;
     }
+    .price, .floor-space {
+      color: $almostblack;
+      padding-bottom: .4rem;
+    }
+    
+    .facilities{
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      border-bottom: 1px solid $darkgrey;
+      padding-bottom: 5px;
+      margin-top: 1rem;
+      margin-bottom: .8rem;
+    }
+
     input[type="text"]{
       border-radius: 3px;
       width: 45%;
@@ -47,13 +71,18 @@
       padding: 0.4rem;
       display: inline-block;
       margin-right: 2.5%;
-      margin-bottom: 1rem;
+      margin-bottom: .8rem;
+      margin-top: .5rem;
+      color: $verydarkgrey;
     }
     &.extras{
-      label{
+      color: $verydarkgrey;
+      span{
+        color: $verydarkgrey;
         display: block;
         input[type="checkbox"]{
           float: right;
+          margin-right: 20px;
         }
       }
     }
@@ -73,8 +102,10 @@
       background: transparent;
       padding: 15px;
       border: none;
-      border-bottom: 2px solid $lightgrey;
+      border-bottom: 1px solid $darkgrey;
       margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 100;
       color: $lightgrey;
     }
   }
@@ -83,36 +114,38 @@
     margin-bottom: 20px;
 
     .results{
-      color: $lightgrey;
+      color: $darkgrey;
       font-size: 0.8rem;
       display: inline-block;
     }
+  
+    .sort-options {
+      float: right;
+      select{
+        font-size: 0.9rem;
+        font-weight: 300;
+        border: 1px solid $lightgrey;
+        background: transparent;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+      .sort-by{
+        padding: 20px;
+      }
+      .view{
+        display: inline-block;
+        .fas{
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 
-  .sort-option {
-    float: right;
-    select{
-      font-size: 0.9rem;
-      font-weight: 300;
-      border: 1px solid $lightgrey;
-      background: transparent;
-      padding: 20px;
-      display: inline-block;
-      margin-right: 15px;
-      vertical-align: top;
-    }
-    .view{
-      display: inline-block;
-      .fa{
-        font-size: 1.5rem;
-
-    }
-
-    }
-  }
   .listing-results{
     margin-bottom: 80px;
-
+    color: transparent !important;
 
     .listings{
       background: $offwhite;
@@ -121,68 +154,179 @@
       -webkit-box-shadow: 10px 6px 34px -16px rgba(0,0,0,0.7);
       -moz-box-shadow: 10px 6px 34px -16px rgba(0,0,0,0.7);
       box-shadow: 10px 6px 34px -16px rgba(0,0,0,0.7);
-    }
-    .listing-img{
-      color: white;
-      padding: 15px;
-      position: realative;
-      background: url(http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg) no-repeat center center; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      min-height: 200px;
-      -webkit-border-top-left-radius: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-
-      .details{
-        padding: 20px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c2ce0+0,b44af7+91 */
-        background: rgba(92,44,224,.8); /* Old browsers */
-        background: -moz-linear-gradient(-45deg, rgba(92,44,224,.8) 0%, rgba(180,74,247,.8) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(92,44,224,.8) 0%,rgba(180,74,247,.8) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(92,44,224,.8) 0%,rgba(180,74,247,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   
+      .listing-img{
+        color: white;
+        padding: 15px;
+        position: relative;
+        background: url("http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg") no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 200px;
         -webkit-border-top-left-radius: 5px;
         -webkit-border-top-right-radius: 5px;
         -moz-border-radius-topleft: 5px;
         -moz-border-radius-topright: 5px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        &:hover{
+          .details{
+            opacity: 1; 
+          }
+          .address{
+            opacity: 0;
+          }
         }
-      .user-img{
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: 2px, solid white;
-        background: url(http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg) no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-      }
-      .user-details{
-        vertical-align: top;
-        display: inline-block;
-        width: 70%;
-      }
-      .user-name{
-        font-size: 0.9rem;
-        font-weight: 300;
-        display: block;
-        color: rgba(255, 255, 255, 1);
+        .address{
+          position: absolute;
+          bottom: 20px;
+          opacity: 1;
+          transition: all 0.4s ease-in-out;
+        }
+        
+        .details{
+          transition: all 0.4s ease-in-out;
+          opacity: 0; 
+          padding: 30px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          -webkit-border-top-left-radius: 5px;
+          -webkit-border-top-right-radius: 5px;
+          -moz-border-radius-topleft: 5px;
+          -moz-border-radius-topright: 5px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c2ce0+0,b44af7+91 */
+          background: rgba(78,2,229,.8); /* Old browsers */
+          background: -moz-linear-gradient(-45deg, rgba(78,2,229,.8) 0%, rgba(157,28,237,.8) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(-45deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(135deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          
+          .col-md-3{
+            width: 25%;
+            display: inline-bock;
+            vertical-align: top;
+            margin-left: 10px;
+            padding: 0  15px;
+          
+            .user-img{
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              border: 2px solid white;
+              background: url("http://www.brokenbowvacationcabins.com/wp-content/uploads/2018/08/sts_ne_front1_500-266x186.jpg") 
+              no-repeat center center; 
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+            }
+          }
+          .col-md-9{
+            width: 75%;
+            display: inline-bock;
+            .user-details{
+              vertical-align: top;
+              display: inline-block;
+              
+              .user-name{
+                font-weight: 300;
+                font-size: 0.9rem;
+                display: block;
+                color: rgba(255, 255, 255, 1);
+                margin-top: 3px;
+                margin-bottom: 5px;
+                margin-left: 50px;
+              }
+              .post-date{
+                font-size: 0.9rem;
+                display: block;
+                color: rgba(255, 255, 255, .7);
+                margin-left: 50px;
+              }
+            }
+            .listing-details{
+              margin-top: 20px;
+              margin-bottom: 20px;
+              margin-left: 50px;
+              
+              .fas{
+                display: inline-block;
+                font-size: 20px;
+                margin-right: 15px;
+              }
+              span{
+                font-weight: 300;
+                font-size: .8rem;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: 3px;
+              }
+              .square-footage{
+                margin-bottom: 15px;
+              }
+              .bedrooms{
+                .fas{
+                  display: inline-block;
+                }  
+              }
+            }
+          }
+          .view-btn{
+            position: absolute;
+            bottom: 20px;
+            background: $almostblack;
+            padding: 7px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            text-align: center;
+            // max-width: 140px;
+            min-width: 120px;
+            margin-left: 90px;
+            transition: background 0.3s ease-in-out;
+            &:hover{
+              background: $pink;
+              cursor: pointer;
+            }
+          }
+        }
+        .bottom-info{
+          padding: 20px;
+          min-height: 150px;
 
+          // position: absolute;
+          // bottom: 20px;
+          span .rate{
+            font-size: 1.1rem;
+            display:block;
+            margin-bottom: 10px;
+            color: $darkgrey;
+          }
+          span .location{
+            font-size: 1.2rem;
+            display:block;
+            color: $lightgrey;
+
+          }
+        }
       }
-      .post-date{
-        display: block;
-        color: rgba(255, 255, 255, .7);
+    }
+  }
+  .pagination{
+    display: inline-block;
+    .pagination-nums{
+      li{
+        color: $darkgrey;
       }
     }
   }
 }
+
+
+
