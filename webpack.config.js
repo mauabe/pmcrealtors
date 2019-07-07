@@ -17,7 +17,7 @@ module.exports = env => {
 	return {
 		entry: {
 			RealEstate: './assets/js/components/RealEstate.js',
-			main: './assets/js/main.js'
+			// main: './assets/js/main.js'
 		},
 		output: {
 			path: path.resolve(__dirname, 'public/js/dist'),

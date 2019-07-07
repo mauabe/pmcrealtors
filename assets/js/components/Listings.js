@@ -11,7 +11,7 @@ class Listings extends Component {
 	render() {
 		return (
 			<div >
-				<section className="listings" >
+				<section id="listings" >
 					<section className="search-area">
 						<input type="text" name="search" />
 					</section>
@@ -29,7 +29,7 @@ class Listings extends Component {
 						</div>
 					</section>
 
-					<section className="listign-results">
+					<section className="listing-results">
 						<div className="listings">
 							<div className="listing-img">
 								<span className="address">Address</span>

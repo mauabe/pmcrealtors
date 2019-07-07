@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
-@import "_variables";
-
+@import "variables";
+@import "content-area";
+@import "listings";
 
 body {
   line-height: 1;
