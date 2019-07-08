@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import listings from '../data/listing-data'
 
 class Listings extends Component {
 	constructor() {
 		super();
 		this.state = {
-			name: 'Joe'
+			name: 'Joe',
+			data: listings.data,
 		};
 	}
 
@@ -63,8 +65,8 @@ class Listings extends Component {
 							</div>
 						</div>
 					</section>
-					<section className="pagination">
-						<ul className="pagination-nums">
+					<section id="pagination">
+						<ul className="pages">
 							<li>Prev</li>
 							<li>1</li>
 							<li>2</li>

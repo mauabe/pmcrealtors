@@ -201,11 +201,11 @@
           -moz-border-radius-topright: 5px;
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
-          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5c2ce0+0,b44af7+91 */
-          background: rgba(78,2,229,.8); /* Old browsers */
-          background: -moz-linear-gradient(-45deg, rgba(78,2,229,.8) 0%, rgba(157,28,237,.8) 100%); /* FF3.6-15 */
-          background: -webkit-linear-gradient(-45deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%); /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(135deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1a9181+0,8ebfe5+100 */
+          background: rgb(26,145,129); /* Old browsers */
+          background: -moz-linear-gradient(-45deg, rgba(26,145,129,.9) 0%, rgba(142,191,229,.7) 100%); /* FF3.7-15 */
+          background: -webkit-linear-gradient(-45deg, rgba(26,145,129,.9) 0%,rgba(142,191,229,.7) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(135deg, rgba(26,145,129,.9) 0%,rgba(142,191,229,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           
           .col-md-3{
             width: 25%;
@@ -298,33 +298,51 @@
         }
         .bottom-info{
           padding: 20px;
-          min-height: 150px;
+          min-height: 150px !important;
 
           // position: absolute;
           // bottom: 20px;
-          span .rate{
+          .rate span{
             font-size: 1.1rem;
             display:block;
             margin-bottom: 10px;
             color: $darkgrey;
           }
-          span .location{
+          .location span{
             font-size: 1.2rem;
             display:block;
             color: $lightgrey;
-
+            cursor:pointer;
           }
         }
       }
     }
   }
-  .pagination{
+}
+
+#pagination{
+  text-align: center;
+  
+  .pages{
+    margin: 0 auto;
     display: inline-block;
-    .pagination-nums{
-      li{
-        color: $darkgrey;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 6px 34px -4px rgba(0,0,0,0.7);
+    -moz-box-shadow: 10px 6px 34px -4px rgba(0,0,0,0.7);
+    box-shadow: 10px 6px 34px -4px rgba(0,0,0,0.7);
+    li{
+      display: inline-block;
+      padding: 20px 30px;
+      color: $darkgrey;
+      &.active,
+      &:hover {
+        border-radius: 5px;
+        color: white;
+        font-weight: 700;
+        background: $pink;
       }
     }
+
   }
 }
 
