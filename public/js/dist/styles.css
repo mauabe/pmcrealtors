@@ -287,22 +287,29 @@ table {
               background: #c2425c;
               cursor: pointer; }
         #listings .listing-results .listings .listing-img .bottom-info {
-          padding: 50px;
-          position: absolute;
-          bottom: 20px; }
-          #listings .listing-results .listings .listing-img .bottom-info .rate {
+          padding: 20px;
+          min-height: 150px; }
+          #listings .listing-results .listings .listing-img .bottom-info span .rate {
             font-size: 1.1rem;
             display: block;
             margin-bottom: 10px;
             color: #828d9d; }
-          #listings .listing-results .listings .listing-img .bottom-info .location {
+          #listings .listing-results .listings .listing-img .bottom-info span .location {
             font-size: 1.2rem;
             display: block;
             color: #dadde2; }
-  #listings .pagination {
-    display: inline-block; }
-    #listings .pagination .pagination-nums li {
-      color: #828d9d; }
+
+#pagination .pages {
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 6px 34px -16px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 10px 6px 34px -16px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 6px 34px -16px rgba(0, 0, 0, 0.7); }
+  #pagination .pages li {
+    display: inline-block;
+    color: #828d9d; }
 
 body {
   box-sizing: border-box;
